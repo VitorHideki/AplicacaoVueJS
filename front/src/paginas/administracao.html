@@ -1,0 +1,430 @@
+<html lang="pt-br" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://www.flaticon.com/br/premium-icon/icons/svg/2923/2923328.svg">
+    <link rel="script" href="index.js">
+    <title>Otels</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript"></script>
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  shadow">
+        <a class="navbar-brand" href="#">Otels</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-home"></i> Home <span class="sr-only">(página atual)
+          </span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-search"></i> Pesquisar</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-users"></i> Sobre Nós</a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="#">
+                        <i class="fas fa-envelope"></i> Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">
+                        <i class="fas fa-admin"></i> Administração</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+
+<div id="formCategoria">
+    <hr>
+    <h2 class="">Cadastre uma nova categoria</h2>
+    <form  class="container-fluid">
+        <div class="form-row container-fluid">
+            <div class="form-group col-md-6">
+                <label for="tipoCategoria">Tipo da Categoria</label>
+                <input type="text" class="form-control" id="tipoCategoria" placeholder="Tipo da Categoria"
+                       v-model="categoria.tipoCategoria" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="nomeDaCategoria">Nome do Categoria</label>
+                <input type="text" class="form-control" id="nomeDaCategoria" placeholder="Nome do Categoria "
+                       v-model="categoria.nome" required>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="descricaoCategoria">Descrição da Categoria</label>
+                <input type="text" class="form-control" id="descricaoCategoria" placeholder="Descrição da Categoria"
+                       v-model="categoria.descricao" required>
+            </div>
+            <button class="btn btn-primary mx-3 container-fluid" type="submit" id="POSTCATEGORIA"
+                    v-on:click="postCategoria()"><i
+                    class="fas fa-share"></i> Post
+            </button>
+        </div>
+    </form>
+    <hr>
+    <table class="table container-fluid">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Tipo de categoria</th>
+            <th scope="col">Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-for="categoria  in categoria">
+            <th scope="row">{{categoria.id}}}</th>
+            <td>{{categoria.nome}}</td>
+            <td>{{categoria.descricao}}</td>
+            <td>{{categoria.tipoCategoria}}</td>
+            <td>
+                <button @click="putCategoria(categoria)" class="btn btn-warning mr-3"><i class="fas fa-cut"> Editar
+                    categoria</i></button>
+                <button @click="dropCategoria(categoria)" class="btn btn-danger"><i
+                        class="fas fa-trash"> Deletar categoria</i></button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<hr>
+
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#formCategoria',
+        created() {
+            this.getCategoria();
+
+            console.log("func")
+        },
+        data: {
+            categoria: {
+                id: '',
+                nome: '',
+                tipoCategoria: '',
+                descricao: '',
+            },
+            errors: []
+        },
+        methods: {
+            getCategoria: function () {
+
+                axios.get("http://localhost:8081/albus/categoria").then(resposta => {
+                    this.categoria = resposta.data
+                    console.log(this.categoria);
+                }).catch(e => {
+                    console.log(e)
+                })
+            },
+            postCategoria: function () {
+                axios.post('http://localhost:8081/albus/categoria', {
+                    tipoCategoria: this.categoria.tipoCategoria,
+                    nome: this.categoria.nome,
+                    descricao: this.categoria.descricao
+
+                }).then(response => {
+                    this.getCategoria();
+                }).catch(error => {
+                    console.log(error)
+                })
+
+                this.getCategoria();
+
+            },
+            putCategoria: function (categoria) {
+                categoria.tipoCategoria = this.categoria.tipoCategoria,
+                    categoria.nome = this.categoria.nome,
+                    categoria.descricao = this.categoria.descricao
+                axios
+                    .put('http://localhost:8081/albus/categoria/' + categoria.id, categoria).then(response => {
+                    this.getCategoria();
+
+                }).catch(error => {
+                    console.log(error)
+                    console.log(categoria.id)
+                })
+                this.categoria.tipoCategoria = '';
+                this.categoria.tipoCategoria = '';
+                this.categoria.descricao = '';
+
+            },
+            dropCategoria: function (categoria) {
+                if (confirm('Deseja excluir a categoria?')) {
+
+                    axios.delete('http://localhost:8081/albus/categoria/' + categoria.id).then(resposta => {
+                        this.getCategoria();
+                    }).catch(error => {
+                        console.log(error)
+                    });
+                    this.getCategoria();
+                }
+
+            }
+        }
+    })
+
+
+</script>
+<hr>
+<div id="formProduto">
+
+    <h2 class="">Cadastre um novo produto</h2>
+    <form class="container-fluid">
+        <div class="form-row container-fluid">
+            <div class="form-group col-md-6">
+                <label for="nome">Nome do produto</label>
+                <input type="text" class="form-control" id="nome" placeholder="Nome do produto"
+                       v-model="produtos.nome" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="quantidade">Quantidade do produto</label>
+                <input type="number" class="form-control" id="quantidade" placeholder="Quantidade do produto "
+                       v-model="produtos.quantidade" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="custo do produto">Custo do Produto</label>
+                <input type="number" class="form-control" id="custo do produto" placeholder="Custo do Produto"
+                       v-model="produtos.custo" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="descrição do produto">Descrição do Produto</label>
+                <input type="text" class="form-control" id="descrição do produto" placeholder="Descrição do Produto"
+                       v-model="produtos.descricao" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="valor de venda do produto">Valor de venda do Produto</label>
+                <input type="number" class="form-control" id="valor de venda do produto"
+                       placeholder="Valor de venda do produto"
+                       v-model="produtos.valorDeVenda" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="urlImg">Imagem do Produto</label>
+                <input type="url" class="form-control" id="urlImg" placeholder="Insira o link da imagem"
+                       v-model="produtos.urlImg" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="categoria">Id da categoria correspondente</label>
+                <input type="text" class="form-control" id="categoria" placeholder="Id da categoria correspondente"
+                       v-model="produtos.categoria" required>
+            </div>
+
+            <button class="btn btn-primary mx-3 container-fluid" type="submit" id="POSTPRODUTO"
+                    @click="postProduto()"><i
+                    class="fas fa-share"></i> Post
+            </button>
+        </div>
+    </form>
+
+    <hr>
+    <div id="card">
+        <div class="row">
+            <div class="card col-3 mt-3 ml-5" style="width: 18rem;" v-for="produto in produtos">
+                <img class="card-img-top" v-bind:src="produto.urlImg" alt="Card imagem">
+                <div class="card-body">
+                    <h5 class="card-title">{{produto.nome}}</h5>
+                    <p class="card-text">{{produto.descricao}}</p>
+                    <p class="card-text">{{produto.id}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Quantidade do produto em estoque: {{produto.quantidade}}</li>
+                    <li class="list-group-item">Custo R$: {{produto.custo}}</li>
+
+                    <!--            <li class="list-group-item">Id da categoria correspondente : {{produto.categoria.id}}</li>-->
+                    <li class="list-group-item">Descrição do produto : {{produto.descricao}}</li>
+                    <li class="list-group-item">Valor R$: {{produto.valorDeVenda}}</li>
+                    <button @click="putProduto(produto)" class="btn btn-warning mb-2"><i class="fas fa-cut"> Editar
+                        categoria</i></button>
+                    <button @click="delCategoria(produto)" class="btn btn-danger"><i
+                            class="fas fa-trash"> Deletar categoria</i></button>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+<script type="application/javascript">
+    var app = new Vue({
+        el: '#formProduto',
+        created() {
+            this.getProduto();
+
+            console.log(this.produtos);
+        },
+        data: {
+            produtos: {
+                id: '',
+                nome: '',
+                quantidade: '',
+                custo: '',
+                descricao: '',
+                valorDeVenda: '',
+                urlImg: '',
+                categoria: {
+                    id: ''
+                }
+            }
+        },
+
+        methods: {
+            getProduto: function () {
+                axios.get('http://localhost:8081/albus/produto').then(response => {
+                    this.produtos = response.data;
+                    console.log(this.produtos);
+                    console.log("funcionou produto")
+                }).catch(function (error) {
+                    console.log(error.config);
+                    console.log("error")
+
+                }).finally(function () {
+                    // always executed
+                })
+            },
+            postProduto: function () {
+                var produto = {
+                    nome: this.produtos.nome,
+                    quantidade: this.produtos.quantidade,
+                    custo: this.produtos.custo,
+                    descricao: this.produtos.descricao,
+                    valorDeVenda: this.produtos.valorDeVenda,
+                    urlImg: this.produtos.urlImg,
+                    categoria: {
+                        id: this.produtos.categoria
+                    }
+                }
+                axios.post('http://localhost:8081/albus/produto', produto).then(response => {
+                    this.getProduto();
+                }).catch(error => {
+                    console.log(error)
+                })
+                this.produtos.nome = '';
+                this.produtos.quantidade = '';
+                this.produtos.custo = '';
+                this.produtos.descricao = '';
+                this.produtos.valorDeVenda = '';
+                this.produtos.urlImg = '';
+                this.getProduto();
+
+            },
+            putProduto: function (produto) {
+                var prod = {
+                    id: this.produtos.id,
+                    nome: this.produtos.nome,
+                    quantidade: this.produtos.quantidade,
+                    custo: this.produtos.custo,
+                    descricao: this.produtos.descricao,
+                    valorDeVenda: this.produtos.valorDeVenda,
+                    urlImg: this.produtos.urlImg,
+                    categoria: {
+                        id: this.produtos.categoria
+                    }
+                }
+                prod.id = produto.id;
+                console.log(prod.id);
+                this.getProduto();
+                axios
+                    .put('http://localhost:8081/albus/produto/' + prod.id, prod).then(response => {
+                    this.getProduto();
+
+                }).catch(error => {
+                    console.log(produto.id)
+                    console.log(error);
+                })
+                this.produtos.id = '';
+                this.produtos.nome = '';
+                this.produtos.quantidade = '';
+                this.produtos.custo = '';
+                this.produtos.descricao = '';
+                this.produtos.valorDeVenda = '';
+                this.produtos.urlImg = '';
+                this.produtos.categoria.id = '';
+            },
+            delCategoria: function (produto) {
+                if (confirm('Deseja excluir o produto?')) {
+
+                    axios.delete('http://localhost:8081/albus/produto/' + produto.id).then(resposta => {
+                        this.getProduto();
+                    }).catch(error => {
+                        console.log(error)
+                    }).finally()
+                    {
+                        this.getProduto();
+
+                    }
+                }
+            }
+
+        }
+    })
+
+</script>
+
+</body>
+
+<style>
+
+    form {
+        align-items: center;
+        width: 500px;
+        padding: 10px 40px;
+    }
+
+
+    :hover {
+        transform: translateY(2px);
+    }
+
+    body {
+        background-color: #fff;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .banner {
+        background: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+</style>
+</html>

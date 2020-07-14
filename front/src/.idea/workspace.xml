@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7607cf38-5868-4c81-a7d9-00d4463b5872" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/AlbusApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/banco/Banco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/banco/BancoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/categoria/Categoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/categoria/CategoriaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/categoria/CategoriaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/categoria/CategoriaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/categoria/EnumTipoCategoria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/endereco/Endereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/endereco/EnderecoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/endereco/EnderecoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/endereco/EnderecoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/endereco/EnumTipoEndereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/estado/Estado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/estado/EstadoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/municipio/Municipio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/municipio/MunicipioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pais/Pais.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pais/PaisRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/ETipoPessoa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/Pessoa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/PessoaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/PessoaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/PessoaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/fisica/PessoaFisica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/fisica/PessoaFisicaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/fisica/PessoaFisicaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/fisica/PessoaFisicaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/juridica/PessoaJuridica.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/juridica/PessoaJuridicaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/juridica/PessoaJuridicaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/pessoa/juridica/PessoaJuridicaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/produto/Produto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/produto/ProdutoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/produto/ProdutoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/comum/produto/ProdutoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/GenericController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/GenericEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/GenericRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/GenericService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/enums/EnumSexo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/enums/EnumSimNao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/enums/EnumSituacao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/exception/GenericEntityTestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/exception/GenericRuntimeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/exception/GenericSqlInexistenteRuntimeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/exception/GenericSqlRuntimeException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/br/com/albus/generic/webConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/banner.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/0.0-master.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/h2/0.0.1-master.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/h2/0.0.1/1_schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1-master.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/10_tb_municipio.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/11_tb_banco.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/12_tb_pessoa.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/13_tb_pessoa_fisica.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/14_tb_pessoa_juridica.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/15_tb_endereco.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/1_schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/2_tb_modulo.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/3_tb_perfil.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/4_tb_permissao.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/5_tb_permissao_por_perfil.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/6_tb_usuario.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/7_tb_usuario_perfil.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/8_tb_pais.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/0.0/postgres/0.0.1/9_tb_estado.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/albus/master.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/resources/db/master-init.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/back" />
+  </component>
+  <component name="ProjectId" id="1de8iQrVfFJMtS0Nxho33l8Ug7m" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/back/pom.xml" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="br.com.albus" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Vitor Hideki\trabalho3\TrabalhoFinal\front\src\paginas" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.albus" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vitor Hideki\trabalho3\TrabalhoFinal\back\web1-back-t3\src" />
+      <recent name="C:\Users\Vitor Hideki\trabalho3\TrabalhoFinal" />
+      <recent name="C:\Users\Vitor Hideki\trabalho3\TrabalhoFinal\front" />
+      <recent name="C:\Users\Vitor Hideki\trabalho3\TrabalhoFinal\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AlbusApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="web1-back-t3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.albus.AlbusApp" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="web1-back-t3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.albus.AlbusApp" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.AlbusApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7607cf38-5868-4c81-a7d9-00d4463b5872" name="Default Changelist" comment="" />
+      <created>1592774324945</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592774324945</updated>
+      <workItem from="1592774329436" duration="9786000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="137" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592784946411">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="137" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1592784946411" />
+    <state x="412" y="154" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1592784934194">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="412" y="154" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.738@0.0.1366.738" timestamp="1592784934194" />
+    <state x="505" y="295" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1592779384213">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="505" y="295" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.738@0.0.1366.738" timestamp="1592779384213" />
+    <state x="479" y="250" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1592779392312">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="479" y="250" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.738@0.0.1366.738" timestamp="1592779392312" />
+    <state x="463" y="63" key="FileChooserDialogImpl" timestamp="1592785229096">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="63" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1592785229096" />
+    <state width="1323" height="227" key="GridCell.Tab.0.bottom" timestamp="1592792190610">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592792190610" />
+    <state width="1323" height="227" key="GridCell.Tab.0.center" timestamp="1592792190610">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1592792190610" />
+    <state width="1323" height="227" key="GridCell.Tab.0.left" timestamp="1592792190609">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1592792190609" />
+    <state width="1323" height="227" key="GridCell.Tab.0.right" timestamp="1592792190610">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1592792190610" />
+    <state width="1323" height="227" key="GridCell.Tab.1.bottom" timestamp="1592792190611">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592792190611" />
+    <state width="1323" height="227" key="GridCell.Tab.1.center" timestamp="1592792190611">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1592792190611" />
+    <state width="1323" height="227" key="GridCell.Tab.1.left" timestamp="1592792190610">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1592792190610" />
+    <state width="1323" height="227" key="GridCell.Tab.1.right" timestamp="1592792190611">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1592792190611" />
+    <state width="1323" height="227" key="GridCell.Tab.2.bottom" timestamp="1592792190612">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.2.bottom/0.0.1366.738@0.0.1366.738" timestamp="1592792190612" />
+    <state width="1323" height="227" key="GridCell.Tab.2.center" timestamp="1592792190612">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.2.center/0.0.1366.738@0.0.1366.738" timestamp="1592792190612" />
+    <state width="1323" height="227" key="GridCell.Tab.2.left" timestamp="1592792190611">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.2.left/0.0.1366.738@0.0.1366.738" timestamp="1592792190611" />
+    <state width="1323" height="227" key="GridCell.Tab.2.right" timestamp="1592792190612">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1323" height="227" key="GridCell.Tab.2.right/0.0.1366.738@0.0.1366.738" timestamp="1592792190612" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1592785232568">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1592785232568" />
+    <state x="65" y="0" key="new project wizard" timestamp="1592792184853">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.738@0.0.1366.738" timestamp="1592792184853" />
+    <state x="363" y="53" key="spring file set editor" timestamp="1592774698238">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="363" y="53" key="spring file set editor/0.0.1366.738@0.0.1366.738" timestamp="1592774698238" />
+  </component>
+</project>

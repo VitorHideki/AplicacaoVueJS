@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns: xmlns:>
+<head>
+    <meta charset="UTF-8">
+    <title>Otels</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://www.flaticon.com/br/premium-icon/icons/svg/2923/2923328.svg">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style media="screen">
+        body {
+            background-color: #fff;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .banner {
+            background: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244));
+        }
+
+        header {
+        }
+    </style>
+
+
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+        <a class="navbar-brand" href="#">Otels</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
+                aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-home"></i> Home <span class="sr-only">(página atual)
+          </span></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-search"></i> Pesquisar</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-users"></i> Sobre Nós</a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link " href="#">
+                        <i class="fas fa-envelope"></i> Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="./administracao.html">
+                        <i class="fas fa-admin"></i> Administração</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <div class="pesquisar jumbotron jumbotron-fluid banner">
+        <div class="banner p-3">
+            <div class="row">
+                <div class="col-sm-6">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCidade">Cidade</label>
+                                <input type="text" class="form-control" id="inputCidade" placeholder="Cidade">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="checkIn">Check-in</label>
+                                <input type="date" class="form-control" id="checkIn" placeholder="Senha">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkOut">Check-out</label>
+                            <input type="date" class="form-control" id="checkOut" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="quartos">Endereço 2</label>
+                            <input type="text" class="form-control" id="quartos"
+                                   placeholder="Apartamento, hotel, casa, etc.">
+                        </div>
+                        <div class="form-row">
+
+
+                            <button type="submit" class="btn btn-primary">Entrar</button>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="col-6">
+                    <img src="assests/img/bannerpica.jpg" alt="imagem" class="img-thumbnail">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<hr>
+<body>
+
+<div id="app">
+    <div class="row">
+        <div class="card col-3 mt-3 ml-5" style="width: 18rem;" v-for="produto in produtos">
+            <img class="card-img-top" v-bind:src="produto.urlImg" alt="Card imagem">
+            <div class="card-body">
+                <h5 class="card-title">{{produto.nome}}</h5>
+                <p class="card-text">{{produto.descricao}}</p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Quantidade: {{produto.quantidade}}</li>
+                <li class="list-group-item">Valor R$: {{produto.valorDeVenda}}</li>
+                <li class="list-group-item">
+                    <button type="button" class="btn container-fluid btn-primary"
+                            v-on:click="comprarProduto(produto)">Comprar
+                    </button>
+                </li>
+            </ul>
+            <br>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#app',
+        created() {
+            this.getProdutos();
+        },
+        data: {
+            produtos: []
+        },
+        methods: {
+            getProdutos: function () {
+                axios.get('http://localhost:8081/albus/produto').then(response => {
+                    this.produtos = response.data;
+                    console.log(this.produtos);
+                    console.log("certo")
+
+                }).catch(function (error) {
+                    console.log(error.config);
+                    console.log("error")
+
+                }).finally(function () {
+                    // always executed
+                })
+            },
+            comprarProduto: function (produto) {
+                if (produto.quantidade === 0) {
+                    return;
+                }
+                produto.quantidade--;
+                axios
+                    .put('http://localhost:8081/albus/produto/' + produto.id, produto).then(response => {
+                }).catch(error => {
+                    console.log(error)
+                })
+            }
+        }
+    })
+
+</script>
+
+
+<hr>
+<div class="sobrenos container main">
+    <h1 class="text-center"><i class="fas fa-users"> </i> Sobre nós</h1>
+    <hr>
+    <p>Lorem Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo
+        utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para
+        fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a
+        editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset
+        lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a
+        softwares de editoração eletrônica como Aldus PageMaker.</p>
+</div>
+<hr>
+<form>
+    <div class="container"></div>
+
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Digite seu email </label>
+        <input type="email" class="form-control" id="exampleFormControlInput1"
+               placeholder="Balan@nãomereprova.porfavor">
+    </div>
+    <div class="form-group">
+
+    </div>
+    <div class="form-group">
+    </div>
+
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Digite um texto</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1"
+                  rows="3">É serio por favor não me reprova</textarea>
+    </div>
+</form>
+<footer class="jumbotron jombotron-fluid  bg-dark mb-0">
+    <p class="text-center">&reg;Todos os direitos reservados. Criado com<a href="https://getbootstrap.com/">
+        Bootstrap </a> e <i
+            class="fas fa-heart"></i> por Vitor Hideki</p>
+
+</footer>
+
+</body>
+</html>
